@@ -12,8 +12,8 @@ Needs Python 3.10 or newer and `pip install "mcp>=2"` in a virtual environment.
 cd dhruva-triage
 python -m venv .venv && source .venv/bin/activate
 pip install "mcp>=2" python-dotenv
-cp ../S4/materials/server_fallback.py mcp_server.py
-python ../S4/materials/call_tool.py mcp_server.py
+cp ../S4/server_fallback.py mcp_server.py
+python ../S4/call_tool.py mcp_server.py
 ```
 
 On Windows use `.venv\Scripts\activate`.
