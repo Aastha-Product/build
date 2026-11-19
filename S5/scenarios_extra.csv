@@ -1,0 +1,6 @@
+id,query,expect_text,expect_tool
+6,What do you recommend for FactoryDesk?,Recommendation: ADVANCE TO CALL,score_application
+7,Should we take a call with PayBridge?,Recommendation: PASS,score_application
+8,Is QuickKart worth a call?,Recommendation: PASS,score_application
+9,Should we pursue StoryPal?,Recommendation: PASS,score_application
+10,Which applications should we take a call with? Give me a shortlist.,LedgerLoop & FactoryDesk,score_application

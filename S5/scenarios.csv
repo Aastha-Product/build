@@ -1,0 +1,6 @@
+id,query,expect_text,expect_tool
+1,Should we take a call with LedgerLoop?,Recommendation: ADVANCE TO CALL,score_application
+2,What is your view on VaultNine?,Recommendation: INSUFFICIENT DATA,score_application
+3,What about application A99?,not found|not be found|no application|unknown|does not exist,
+4,Open a ticket for an analyst to look at VaultNine because its form is nearly empty.,ticket,escalate_to_analyst
+5,Please escalate VaultNine again. I am not sure the first request went through.,already,escalate_to_analyst
