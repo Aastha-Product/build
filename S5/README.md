@@ -6,9 +6,7 @@ You build the same Dhruva assistant twice and measure whether splitting it into 
 |---|---|
 | `dhruva_tools.py` | Four tools: `list_applications`, `get_application`, `score_application`, `escalate_to_analyst`. The type hints and docstrings are the job cards the model reads |
 | `dhruva_core/` | Dhruva's loader, scoring and guard code, with the six applications and their cached assessments. Scores are the same on every run |
-| `dhruva_v1/agent.py` | v1: one agent with all four tools. Use it only if Claude Code could not produce one |
-| `dhruva_v2/agent.py` | v2: an interaction agent that talks to Ira and hands work to an analyst agent and an ops agent. Same rule |
-| `scenarios.csv` | The 5 core questions both versions answer (`scenarios_extra.csv` has 5 more) |
+| `dhruva_v1/`, `dhruva_v2/` | Not here: you build them in class with Claude Code. Solutions are on the `solutions` branch (see below) |
 | `eval_agent.py` | Runs the 5 questions and prints pass rate, model calls per query and latency |
 
 ## Setup (about 15 minutes)
@@ -62,3 +60,14 @@ A free key limits requests per minute and per day. Add `--rpm 5` to stay under t
 | `503 UNAVAILABLE` | Gemini is busy. Wait a minute and run again; `eval_agent.py` retries twice by itself |
 | `adk: command not found` | Activate the environment, or use `python -m google.adk.cli web` |
 | The dev UI lists no agents | Run `adk web` from the `S5` folder, not from inside `dhruva_v1` |
+
+## If your agent will not run (use after the 4-minute mark of each lab)
+
+From the `S5` folder:
+
+```
+git fetch origin solutions
+git checkout origin/solutions -- dhruva_v1     # or dhruva_v2
+```
+
+This copies the finished agent folder in. Read it, then run it. The lesson is reading and measuring.
