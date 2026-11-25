@@ -1,0 +1,42 @@
+{
+  "models": {
+    "small": "gemini-3.5-flash-lite",
+    "large": "gemini-3.8-flash"
+  },
+  "limits": {
+    "query_timeout_s": 5,
+    "row_limit": 200,
+    "narration_row_cap": 20,
+    "repair_retries": 1,
+    "max_concurrent_model_calls": 8,
+    "model_rpm": 14
+  },
+  "cache": {
+    "ttl_s": 3600,
+    "data_version": "2026-11-22"
+  },
+  "budget": {
+    "cost_ceiling_rs_per_question": 0.5,
+    "monthly_rs": 1500
+  },
+  "paths": {
+    "retail_db": "retail.db",
+    "users": "users.json",
+    "cache_db": "cache.db",
+    "token_log_db": "token_log.db"
+  },
+  "pricing": {
+    "usd_per_1m_tokens": {
+      "gemini-3.5-flash-lite": {
+        "in": 0.3,
+        "out": 2.5
+      },
+      "gemini-3.8-flash": {
+        "in": 0.75,
+        "out": 3.75
+      }
+    },
+    "usd_to_inr": 90,
+    "note": "Prices from aistudio.google.com/docs/pricing read on 2026-11-25 via a summary, confirm before relying. gemini-3.8-flash doubles on 2027-01-01 (in 1.50, out 7.50). usd_to_inr is an assumption."
+  }
+}
